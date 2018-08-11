@@ -5,8 +5,10 @@ function setup() {
 
 // Drawn on each frame.
 function draw() {
-  fill(255);
-  rect(10, 10, 10, 10);
+  stroke(255);
+  for (let x = 0; x < windowWidth; x++) {
+    point(x, 10);
+  }
 }
 
 function windowResized() {
