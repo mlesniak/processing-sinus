@@ -12,14 +12,17 @@ function drawMessage(message) {
   for (let x = 0; x < windowWidth; x++) {
     let xPos = x;
     let yPos = windowHeight / 2 + Math.sin((x) / 60) * 40;
-    stroke(255);
-    point(xPos, yPos);
+    // For debugging.
+    // stroke(255);
+    // point(xPos, yPos);
 
-    if (x % 10 != 0) {
+    let p = frameCount % windowWidth;
+    let distance = 16;
+    if (xPos < p) {
       continue;
     }
 
-    let index = x / 10;
+    let index = (xPos - p) / distance;
     if (index > message.length) {
       continue;
     }
