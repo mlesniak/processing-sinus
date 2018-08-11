@@ -11,9 +11,9 @@ function initFrame() {
 function drawMessage(message) {
   for (let x = 0; x < windowWidth; x++) {
     let xPos = x;
-    let yPos = windowHeight / 2 + Math.sin((x - frameCount) / 60) * 40;
-    // stroke(255);
-    // point(xPos, yPos);
+    let yPos = windowHeight / 2 + Math.sin((x) / 60) * 40;
+    stroke(255);
+    point(xPos, yPos);
 
     if (x % 10 != 0) {
       continue;
@@ -25,7 +25,7 @@ function drawMessage(message) {
     }
     stroke(0);
     fill(255);
-    text(message[index], xPos + windowWidth / 2, yPos);
+    text(message[index], xPos, yPos);
   }
 }
 
