@@ -16,7 +16,8 @@ function drawMessage(message) {
     // stroke(255);
     // point(xPos, yPos);
 
-    let p = frameCount % windowWidth;
+    let speed = 4.0;
+    let p = (frameCount * speed) % windowWidth;
     let distance = 16;
     if (xPos < p) {
       continue;
