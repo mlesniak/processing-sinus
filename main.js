@@ -3,8 +3,10 @@ function setup() {
   background(0);
 }
 
+// Drawn on each frame.
 function draw() {
-  // Empty on purpose
+  fill(255);
+  rect(10, 10, 10, 10);
 }
 
 function windowResized() {
