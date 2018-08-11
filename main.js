@@ -7,7 +7,7 @@ function setup() {
 function draw() {
   stroke(255);
   for (let x = 0; x < windowWidth; x++) {
-    point(x, windowHeight / 2);
+    point(x, windowHeight / 2 + Math.sin(x));
   }
 }
 
