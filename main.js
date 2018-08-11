@@ -5,7 +5,7 @@ function setup() {
 function initFrame() {
   background(0);
   stroke(255);
-  textSize(8);
+  textSize(16);
 }
 
 function drawMessage(message) {
