@@ -9,27 +9,16 @@ function initFrame() {
 }
 
 function drawMessage(message) {
-  for (let x = 0; x < windowWidth; x++) {
-    let xPos = x;
-    let yPos = windowHeight / 2 + Math.sin((x) / 60) * 40;
-    // For debugging.
-    // stroke(255);
-    // point(xPos, yPos);
+  stroke(0);
+  fill(255);
+  let speed = 2.0;
 
-    let speed = 4.0;
+  let distance = 16;
+  for (let i = 0; i < message.length; i++) {
     let p = (frameCount * speed) % windowWidth;
-    let distance = 16;
-    if (xPos < p) {
-      continue;
-    }
-
-    let index = (xPos - p) / distance;
-    if (index > message.length) {
-      continue;
-    }
-    stroke(0);
-    fill(255);
-    text(message[index], xPos, yPos);
+    let xPos = p + i * distance;
+    let yPos = windowHeight / 2 + Math.sin((xPos) / 60) * 40;
+    text(message[i], xPos % windowWidth, yPos);
   }
 }
 
